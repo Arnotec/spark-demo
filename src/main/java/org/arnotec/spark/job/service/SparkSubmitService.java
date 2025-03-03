@@ -35,7 +35,7 @@ public class SparkSubmitService {
     public String submitPiSparkJob() {
         try {
 
-            String command = String.format("spark-submit --class %s --master %s %s %s", jobPiClass, sparkMaster, jobPiJar, jobCountArgs);
+            String command = String.format("spark-submit --class %s --master %s %s", jobPiClass, sparkMaster, jobPiJar);
             LOGGER.info("********** Execution de la commande ***** : {}", command);
 
             // Exécution de la commande
@@ -73,7 +73,7 @@ public class SparkSubmitService {
         try {
 
             String command = String.format("spark-submit --class %s --master %s %s %s", jobCountClass, sparkMaster, jobCountJar, jobCountArgs);
-            LOGGER.info("Execution de la commande : {}", command);
+            LOGGER.info("********** Execution de la commande ***** : {}", command);
 
             // Exécution de la commande
             Process process = Runtime.getRuntime().exec(command);

@@ -9,7 +9,7 @@ import java.util.List;
 
 public class PiSparkJob {
     public static void main(String[] args) {
-        System.out.println("======== Dans le job calcul de Pi =============\n");
+        System.out.println("======== Dans le job calcul de Pi =============");
 
         // Initialiser SparkSession
         SparkSession spark = SparkSession.builder()
@@ -36,7 +36,7 @@ public class PiSparkJob {
         }).reduce(Integer::sum);
 
         // Afficher le résultat
-        System.out.println("\n ========> Pi est environ : " + 4.0 * count / numSamples);
+        System.out.println(" ========> Pi est environ : " + 4.0 * count / numSamples + " <======== <br><br><br><br>");
 
         // Arrêter le contexte Spark
         jsc.stop();
